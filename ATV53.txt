@@ -1,0 +1,56 @@
+//Codigo SQL
+
+CREATE DATABASE biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE livro (
+Cod_Livro INT,
+Titulo VARCHAR(30),
+Autor VARCHAR(30),
+Cod_Sessao INT(30)
+);
+
+CREATE TABLE sessao (
+Codigo INT,
+Descricao VARCHAR(30),
+Localizacao VARCHAR(30),
+);
+
+CREATE TABLE livro_Emprestimo (
+Cod_Livro INT,
+Cod_Emprestimo INT
+);
+
+CREATE TABLE Aluno (
+Id INT,
+Nome VARCHAR(30),
+Matricula INT,
+E-mail VARCHAR(30),
+Endereco VARCHAR(30),
+Telefone INT
+);
+
+CREATE TABLE Emprestimo (
+Codigo INT,
+Data_Hora INT,
+Matric_Aluno INT,
+Data_Devolucao INT
+);
+
+ALTER TABLE Aluno
+ADD COLUMN Data_Nascimento INT;
+
+ALTER TABLE Aluno RENAME COLUMN telefone TO contato;
+
+ALTER TABLE Livro
+ADD COLUMN isbn INT(13);
+
+ALTER TABLE Livro DROP COLUNM isbn;
+
+
+
+
+
+
+
